@@ -1,0 +1,4 @@
+export enum ActionTypes {
+    GETALLMOVIES="GETALLMOVIES",
+    GETPOPULARMOVIE = "GETPOPULARMOVIE"
+}

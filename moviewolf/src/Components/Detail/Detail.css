@@ -1,0 +1,63 @@
+.Full{
+    height: 100%;
+    width: 100%;
+}
+.DetailContainer{
+    height: 100%;
+    width: 100%;
+    color: white;
+    font-size: 40px;
+    margin: 20px 50px 50px 50px;
+    
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.FirstContainerDetail{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    padding: 0px;
+    width: 90%;
+    left: 50%;
+}
+.SecondContainerDetail{
+    width: 90%;
+    display: flex;
+   
+    align-items: center;
+    
+}
+.summary{
+    font-size: 30px;
+    margin-bottom: 20px ;
+}
+.img{
+    box-shadow: 3px 3px 3px black ;
+    margin: 10px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    height: 600px;
+}
+.genres{
+    border: 1px solid black;
+    font-size: 20px;
+    width: 20%;
+}
+.cente{
+    pointer-events: fill;
+    margin-right: 200px;
+}
+.DetailButton{
+    background-color: transparent;
+    color: whitesmoke;
+    padding: 10px;
+    border:  0px;
+}
+.DetailButton:hover{
+    font-size: 20px;
+    transition: cubic-bezier(1, 0, 0, 1);
+}

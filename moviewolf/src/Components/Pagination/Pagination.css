@@ -1,0 +1,51 @@
+ .PaginationContained{
+
+    max-height: 20%;
+    width: 100%;
+    color: white;
+  
+    list-style: none;
+} 
+.Pagination{display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    justify-content: center;
+    padding-left:0;
+    list-style:none;
+    border-radius:.25rem}
+.pag-page{
+    list-style: none;
+}
+.page-link{
+    position:relative;
+    display:block;
+    padding:.5rem .75rem;
+    margin-left:-1px;
+    line-height:1.25;
+    color:#013e00cd;
+    background-color:#fff;
+    border:1px solid #020904}
+.page-link:hover{
+    color:#0056b3;
+    text-decoration:none;
+    background-color:#e9ecef;
+    border-color:#dee2e6}
+.page-link:focus{
+    z-index:2;
+    outline:0;
+    box-shadow:0 0 0 .2rem rgba(0, 159, 125, 0.564);
+    border:0px;
+}
+.page-link:not(:disabled):not(.disabled){cursor:pointer}
+
+.page-item:last-child 
+
+.page-item.active 
+.page-link{z-index:1;color:#fff;background-color:#007bff;border-color:#007bff}
+.page-item.disabled 
+.page-link{
+    color:#6c757d;
+    pointer-events:none;
+    cursor:auto;
+    background-color:#fff;
+    border-color:#dee2e6}

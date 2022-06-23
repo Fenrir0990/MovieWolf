@@ -1,0 +1,39 @@
+.App {
+  text-align: center;
+  /*background-image: repeating-linear-gradient(black,rgb(10, 244, 178),black);*/
+  /* background:
+      linear-gradient(300deg,rgb(11, 244, 174),rgb(0, 0, 0)),
+      linear-gradient(200deg, rgba(0, 255, 145, 0.97), rgba(0, 0, 0, 0) 70.71%),
+      linear-gradient(300deg, rgba(0, 0, 0, 0.999), rgba(0, 0, 0, 0) 70.71%),
+      linear-gradient(200deg, rgba(0, 255, 145, 0.8), rgb(0, 0, 0) 70.71%);
+       */
+  background: rgb(0,0,0);
+  background: -moz-linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(29,90,70,1) 15%, rgba(58,180,140,1) 50%, rgba(29,90,70,1) 85%, rgba(0,0,0,1) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(29,90,70,1) 15%, rgba(58,180,140,1) 50%, rgba(29,90,70,1) 85%, rgba(0,0,0,1) 100%);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(29,90,70,1) 15%, rgba(58,180,140,1) 50%, rgba(29,90,70,1) 85%, rgba(0,0,0,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+  min-height:100vh;
+  height: 100%;
+width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column ;
+}
+.FirtsContained{
+  height: 90%;
+  width: 90%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  
+  background-color: rgba(0, 0, 0, 0.878);
+  
+  border-radius: 4px;
+  box-shadow: black 50px;
+  min-height: 90vh;
+  min-width: 90vh;
+}
+.Link{
+  text-decoration: none;
+  color: aliceblue;
+}

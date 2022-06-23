@@ -1,0 +1,14 @@
+.CardContainerH{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: auto;
+    min-width: 100px;
+    max-width: 180px;
+   
+    box-shadow: 5px 5px 20px black;
+}
+.CardImgH{
+    width: 100%;
+    text-align: center;
+}

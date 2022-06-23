@@ -1,0 +1,19 @@
+.HomeContainer{
+margin-top: 0px;
+
+}
+
+.FirstContainerHome{
+    background-image: url("https://wallpapers-hub.art/wallpaper-images/288744.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 300px;
+
+
+    color: white;
+}
+
+.titlePort{
+    font-size: 50px;
+}
