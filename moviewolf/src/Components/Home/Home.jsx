@@ -1,7 +1,7 @@
 import React, {useEffect,useState} from "react";
 import { useSelector,useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import {AiFillCaretRight,AiTwotoneFire,AiOutlineHourglass,AiOutlineSend} from "react-icons/ai"
+import {AiFillCaretRight,AiTwotoneFire,AiOutlineHourglass} from "react-icons/ai"
 
 import { getAllmovies, getPopularMovie,getRecentlyMovie, SearchMovies } from "../../Redux/Actions/Index";
 
@@ -25,7 +25,7 @@ const Home = ()=>{
         if(Populars.length ===0) dispatch(getPopularMovie());
         if(Recently.length===0) dispatch(getRecentlyMovie());
          
-    },[dispatch])
+    },[dispatch,Recently,Populars])
 
     //**FUNCTIONS**/
     const onChange = (e)=>{
@@ -58,8 +58,8 @@ const Home = ()=>{
                 <h2 className="titlePort">Your Favourite Movies.Explained.</h2>
                 <h4>Figure out what happend.Then find out why</h4>
                 <span>
-                    <input type="search" value={search} name="search" onChange={(e)=>onChange(e)}></input>
-                    <button onClick={()=>{searching(search)}}>Search</button>
+                    <input className="inputHome" type="search" value={search} name="search" onChange={(e)=>onChange(e)}></input>
+                    <button className="searchButton" onClick={()=>{searching(search)}}>Search</button>
                 </span>
                 
             </header>
@@ -80,7 +80,7 @@ const Home = ()=>{
             <div className="HomeComponent RecentlyMovies">
                     <span className="RecentlyTitle">
                         <h4 className="title"><AiOutlineHourglass/>Recently Movies</h4>
-                        <button className="buttonCatalogo Recently" onClick={()=>navigate("/catalogue")}>Show All<AiOutlineSend/></button>
+                        <button className="buttonCatalogo Recently" onClick={()=>navigate("/catalogue")}>Show All<AiFillCaretRight/></button>
                     </span>
                     <div className="grid">
                         {

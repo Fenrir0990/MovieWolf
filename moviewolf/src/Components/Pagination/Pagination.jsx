@@ -9,7 +9,7 @@ const Pagination = ({pageCount,setPage})=>{
 
     const handlePageClick=(number)=>{
         setPage(number.selected+1)
-        console.log(number.selected+1)
+        
     }
     return (
         <div className="PaginationContained">

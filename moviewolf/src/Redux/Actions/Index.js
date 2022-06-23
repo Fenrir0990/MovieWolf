@@ -1,9 +1,9 @@
 ////***ACTIONS***////
 import axios from "axios";
-import { Dispatch } from "react"
+
 import * as ActionsTypes from "../Actions-Types/ActionsTypes"
-import * as url from "../../etc/Url" 
-import defaul from "../../Img/MovieWolf.png"
+import * as url from "../../utils/Url" 
+import defaul from "../../assets/MovieWolf.png"
 
 export const getAllmovies = (a) => async(dispatch)=>{
     try{
@@ -27,7 +27,6 @@ export const getAllmovies = (a) => async(dispatch)=>{
                 voteCount:movie.vote_count
             };
         });
-        /* console.log(comics); */
         return dispatch({
             type:ActionsTypes.GETALLMOVIES,
             payload:movies
@@ -48,7 +47,6 @@ export const getPopularMovie = ()=>async(dispatch)=>{
                 posterImg:url.UrlImg+movie.poster_path
             }
         })
-        /* console.log(movies) */
         return dispatch({
             type:ActionsTypes.GETPOPULARMOVIE,
             payload:movies
@@ -63,11 +61,6 @@ export const getPopularMovie = ()=>async(dispatch)=>{
 export const getRecentlyMovie = ()=>async(dispatch)=>{
     try{
         const {data} = await axios.get(url.RECENTLY);
-        
-        /* console.log(data.results)
-        console.log(`https://image.tmdb.org/t/p/w500${data.results[1].backdrop_path}`)
-        console.log(`https://image.tmdb.org/t/p/w500${data.results[1].poster_path}`) */
-
         var movies = data.results.map(movie=>{
             return {
                 id:movie.id,
@@ -75,7 +68,7 @@ export const getRecentlyMovie = ()=>async(dispatch)=>{
                 posterImg:movie.poster_path?url.UrlImg+movie.poster_path:defaul
             }
         })
-        /* console.log(movies) */
+      
         return dispatch({
             type:ActionsTypes.GETRECENTLYMOVIE,
             payload:movies
@@ -111,7 +104,7 @@ export const getDetailMovie = (id)=>async(dispatch)=>{
 };
 export const filterByStars = (number)=>async(dispatch)=>{
     try{
-        console.log(number)
+       
         return dispatch({
             type:ActionsTypes.FILTERAVERAGE,
             payload:number
@@ -145,12 +138,6 @@ export const SearchMovies = (text,a)=>async(dispatch)=>{
                 voteCount:movie.vote_count
             };
         });
-        /* let movies
-        const {data} = await axios.get(url.API_URL_SERACH+url.query.search(text)+url.query.page(number))
-        console.log(data)
-        console.log(text)
-        movies = data.results */
-        console.log(movies)
         return dispatch({
             type:ActionsTypes.SEARCHMOVIES,
             payload:movies

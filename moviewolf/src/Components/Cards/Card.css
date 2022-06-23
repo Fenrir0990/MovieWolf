@@ -13,3 +13,6 @@
     width: 100%;
     height: 90%;
 }
+.CardContainer:hover{
+    box-shadow:5px 5px 20px rgb(4, 46, 7);
+}

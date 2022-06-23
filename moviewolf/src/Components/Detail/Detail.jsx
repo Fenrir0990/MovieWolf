@@ -3,7 +3,7 @@ import { useDispatch,useSelector } from "react-redux";
 import { useState } from "react";
 import { useParams,Link } from "react-router-dom";
 
-import styled from "styled-components";
+
 
 import { getDetailMovie } from "../../Redux/Actions/Index";
 
@@ -22,10 +22,11 @@ const Detail = ()=>{
         const e = async()=>{
             setShow(true)
             const d = await dispatch(getDetailMovie(id))
-            console.log(1,details)
             setShow(false)
+            const a= window.scrollTo
+            d=d
         }
-
+        
         e()
     },[dispatch])
     
@@ -38,18 +39,18 @@ const Detail = ()=>{
                         <h3 className="title center">{details.title}</h3>
                     </div>
                     <div className="SecondContainerDetail">
-                        <img className="img"src={details.posterImg}></img>
+                        <img className="img"src={details.posterImg} alt={"img not found"} ></img>
                          <div >
                             <a className="summary">{details.summary}</a>
                             <div className="extra">
                                 {details.genres?.map(a=><p className="genres">{a.name}</p>)} 
-                                <center>Rating{details.rating}</center>{}
+                                <center>Rating  {details.rating}</center>{}
                             </div>
                         </div>  
                     </div>
                     <div className="ThirtyContainer">
-                        <button><Link to={"/"}>Home</Link></button>
-                        <button><Link to={"/AllMovies"}>Home</Link></button>      
+                        <button className="detailButton"><Link className="Link" to={"/"}>Home</Link></button>
+                        <button className="detailButton"><Link className="Link" to={"/AllMovies"}>All Movies</Link></button>      
                     </div> 
                 </div>
             }

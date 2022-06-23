@@ -51,13 +51,22 @@
     pointer-events: fill;
     margin-right: 200px;
 }
-.DetailButton{
-    background-color: transparent;
-    color: whitesmoke;
+.ThirtyContainer{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+.detailButton{
+    background-color: rgb(2, 52, 39);
+    font-size: 20px;
     padding: 10px;
     border:  0px;
+    border-radius: 10px;
+    transition: 0.5s
 }
-.DetailButton:hover{
-    font-size: 20px;
-    transition: cubic-bezier(1, 0, 0, 1);
+.detailButton:hover{
+ background-color:rgb(3, 69, 51);
+ padding: 9px;
+ font-size: 25px
+ ;
 }

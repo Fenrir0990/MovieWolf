@@ -27,7 +27,7 @@ const Catalogue = ()=>{
     
     useEffect(()=>{
         if(movies.length === 0)dispatch(getAllmovies(20)) 
-    },[dispatch])
+    },[dispatch,movies])
     
     //**Functions**//
     const searching = (search)=>{
@@ -57,7 +57,7 @@ const Catalogue = ()=>{
                 <div className="Tools">
                     <p>Filter and Order yours movies</p>
                     <span>
-                        <label>Search</label>
+                        <label className="filterLabel">Search </label>
                         <input 
                             type="search" 
                             value={search} 
@@ -67,14 +67,14 @@ const Catalogue = ()=>{
                         <br></br>
                     </span>
                     <span className="rating">
-                        <label>Rating</label>
+                        <label  className="filterLabel">Rating:  </label>
                         <StarReiting 
                             rating={rating}
                             setRating={setRating}
                             hover={hover}
                             setHover={setHover}
                             filter= {filter}                 
-                        />
+                        />{rating===(null)?null:`   ${rating === 0?0:rating*2-2}~${rating === 0?2:rating*2}`}
                     </span>
                 </div>
                 <div className="MoviesContainer">
